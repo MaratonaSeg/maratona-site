@@ -262,7 +262,7 @@ button, input, select, textarea { font: inherit; color: inherit; }
 .trust__item strong { color: var(--roxo); font-size: 1rem; }
 .trust__item p span { color: var(--text-muted); font-size: .85rem; margin-top: 2px; }
 .trust__num {
-  font-size: 2.6rem; font-weight: 800; line-height: 1; letter-spacing: -.04em;
+  white-space: nowrap; font-size: 2.6rem; font-weight: 800; line-height: 1; letter-spacing: -.04em;
   background: linear-gradient(135deg, var(--dourado), var(--roxo) 80%); -webkit-background-clip: text; background-clip: text; color: transparent;
 }
 
@@ -388,6 +388,56 @@ button, input, select, textarea { font: inherit; color: inherit; }
 .mosaic__tile::after {
   content: ""; position: absolute; top: 10px; right: 10px; width: 7px; height: 7px; border-radius: 50%;
   background: #ff4d6d; animation: blink 1.4s infinite;
+}
+
+/* ---------- Foto do condomínio ---------- */
+.segment__photo {
+  position: relative; z-index: 1; margin: 0; border-radius: var(--radius-lg); overflow: hidden;
+  box-shadow: var(--shadow-lg); aspect-ratio: 5 / 4; background: var(--lilas-100);
+}
+.segment__photo img { width: 100%; height: 100%; object-fit: cover; }
+.segment__card--float { max-width: 330px; margin: -120px 0 0 auto; margin-right: -16px; padding: 22px 24px; }
+.segment__card--float .checklist li { padding: 10px 0; font-size: .92rem; }
+
+/* ---------- Galeria de soluções ---------- */
+.gallery { background: var(--bg-soft); }
+.gallery__grid { display: grid; grid-template-columns: repeat(3, 1fr); grid-auto-rows: 340px; gap: 20px; }
+.gallery__item {
+  position: relative; display: block; border-radius: var(--radius-lg); overflow: hidden;
+  background: var(--lilas-100); box-shadow: var(--shadow-sm);
+  transition: transform .35s var(--ease), box-shadow .35s var(--ease);
+}
+.gallery__item--wide { grid-column: span 2; }
+.gallery__item img { width: 100%; height: 100%; object-fit: cover; transition: transform .6s var(--ease); }
+.gallery__item::after {
+  content: ""; position: absolute; inset: 0;
+  background: linear-gradient(180deg, transparent 45%, rgba(26, 10, 46, .88));
+}
+.gallery__cap {
+  position: absolute; left: 0; right: 0; bottom: 0; z-index: 1; padding: 22px 24px;
+  display: flex; flex-direction: column; gap: 2px; color: #fff;
+}
+.gallery__cap strong { font-size: 1.15rem; font-weight: 800; letter-spacing: -.01em; }
+.gallery__cap strong::after { content: " →"; color: var(--dourado-claro); }
+.gallery__cap em { font-style: normal; font-size: .9rem; color: var(--lilas-200); }
+.gallery__item:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
+.gallery__item:hover img { transform: scale(1.04); }
+.gallery__item:focus-visible { outline: 3px solid var(--dourado); outline-offset: 3px; }
+.gallery__note { margin-top: 14px; font-size: .78rem; color: var(--text-muted); text-align: right; }
+
+@media (max-width: 1024px) {
+  .gallery__grid { grid-template-columns: 1fr 1fr; grid-auto-rows: 300px; }
+  .segment__card--float { margin-right: 0; }
+}
+@media (max-width: 640px) {
+  .gallery__grid { grid-template-columns: 1fr; grid-auto-rows: auto; gap: 14px; }
+  .gallery__item, .gallery__item--wide { grid-column: auto; aspect-ratio: 4 / 3; }
+  .gallery__cap { padding: 18px 20px; }
+  .segment__card--float { max-width: none; margin: -48px 12px 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .gallery__item, .gallery__item img { transition: none; }
+  .gallery__item:hover, .gallery__item:hover img { transform: none; }
 }
 
 /* ---------- Como funciona ---------- */

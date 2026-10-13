@@ -36,7 +36,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css?v=20261013">
 
   <!-- Dados estruturados (SEO local) -->
   <script type="application/ld+json">
@@ -217,8 +217,8 @@
         <p><strong>anos de experiência</strong><span>Atuando desde 2000</span></p>
       </div>
       <div class="trust__item">
-        <svg class="icon icon--lg"><use href="#i-pin"/></svg>
-        <p><strong>Atendimento em Salvador</strong><span>Equipe local</span></p>
+        <span class="trust__num">+2 mil</span>
+        <p><strong>clientes atendidos</strong><span>Em Salvador e região</span></p>
       </div>
       <div class="trust__item">
         <svg class="icon icon--lg"><use href="#i-wrench"/></svg>
@@ -314,6 +314,37 @@
     </div>
   </section>
 
+
+  <!-- ============ 4b. SOLUÇÕES EM IMAGENS ============ -->
+  <section class="section gallery" id="solucoes" aria-labelledby="gallery-title">
+    <div class="container">
+      <header class="section__head">
+        <p class="kicker">Na prática</p>
+        <h2 id="gallery-title">Tecnologia que trabalha pela sua segurança</h2>
+        <p>Do controle de acesso por reconhecimento facial à manutenção dos equipamentos, cuidamos de cada etapa do sistema.</p>
+      </header>
+      <div class="gallery__grid">
+        <a class="gallery__item gallery__item--wide" href="controle-de-acesso/">
+          <img src="assets/img/fotos/controle-acesso-facial.webp" srcset="assets/img/fotos/controle-acesso-facial-600.webp 600w, assets/img/fotos/controle-acesso-facial.webp 1024w" sizes="(max-width: 640px) 92vw, (max-width: 1024px) 92vw, 760px" width="1024" height="768" alt="Leitor de reconhecimento facial na entrada de um edifício" loading="lazy" decoding="async">
+          <span class="gallery__cap"><strong>Controle de acesso facial</strong><em>Entrada liberada só para quem pode entrar</em></span>
+        </a>
+        <a class="gallery__item" href="cftv/">
+          <img src="assets/img/fotos/equipe-tecnica.webp" srcset="assets/img/fotos/equipe-tecnica-600.webp 600w, assets/img/fotos/equipe-tecnica.webp 1024w" sizes="(max-width: 640px) 92vw, (max-width: 1024px) 46vw, 380px" width="1024" height="1024" alt="Técnicos instalando câmera de segurança na fachada de um prédio" loading="lazy" decoding="async">
+          <span class="gallery__cap"><strong>Instalação de CFTV</strong><em>Projeto e instalação de câmeras</em></span>
+        </a>
+        <a class="gallery__item" href="manutencao/">
+          <img src="assets/img/fotos/tecnico-manutencao.webp" srcset="assets/img/fotos/tecnico-manutencao-600.webp 600w, assets/img/fotos/tecnico-manutencao.webp 1024w" sizes="(max-width: 640px) 92vw, (max-width: 1024px) 46vw, 380px" width="1024" height="1024" alt="Técnico fazendo manutenção em câmera de segurança" loading="lazy" decoding="async">
+          <span class="gallery__cap"><strong>Manutenção preventiva</strong><em>Sistema funcionando quando você precisa</em></span>
+        </a>
+        <a class="gallery__item gallery__item--wide" href="portoes/">
+          <img src="assets/img/fotos/motores-cancelas.webp" srcset="assets/img/fotos/motores-cancelas-600.webp 600w, assets/img/fotos/motores-cancelas.webp 1024w" sizes="(max-width: 640px) 92vw, (max-width: 1024px) 92vw, 760px" width="1024" height="768" alt="Portaria com cancela automática e portão eletrônico" loading="lazy" decoding="async">
+          <span class="gallery__cap"><strong>Portões e cancelas</strong><em>Automação e manutenção de acessos de veículos</em></span>
+        </a>
+      </div>
+      <p class="gallery__note">Imagens ilustrativas.</p>
+    </div>
+  </section>
+
   <!-- ============ 5. MANUTENÇÃO ============ -->
   <section class="section maint" id="manutencao">
     <div class="container maint__inner">
@@ -347,8 +378,11 @@
   <!-- ============ 6. CONDOMÍNIOS ============ -->
   <section class="section segment" id="condominios">
     <div class="container segment__inner">
-      <div class="segment__media" aria-hidden="true">
-        <div class="segment__card">
+      <div class="segment__media">
+        <figure class="segment__photo">
+          <img src="assets/img/fotos/condominio.webp" srcset="assets/img/fotos/condominio-600.webp 600w, assets/img/fotos/condominio.webp 1024w" sizes="(max-width: 1024px) 92vw, 520px" width="1024" height="1024" alt="Entrada de condomínio com câmera de segurança e portaria iluminada" loading="lazy" decoding="async">
+        </figure>
+        <div class="segment__card segment__card--float" aria-hidden="true">
           <div class="segment__card-head">
             <svg class="icon"><use href="#i-report"/></svg>
             <span>Relatório de manutenção</span>
