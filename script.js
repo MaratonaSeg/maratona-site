@@ -178,6 +178,13 @@
       }
       status.classList.remove('is-error');
 
+      // Avisa o tracking.js (medição de contatos) — sem dados pessoais
+      try {
+        document.dispatchEvent(new CustomEvent('maratona:lead', {
+          detail: { servico: data.servico, perfil: data.perfil }
+        }));
+      } catch (err) { /* navegador antigo: ignora */ }
+
       var endpoint = form.getAttribute('data-endpoint');
 
       // Integração futura: se houver endpoint configurado, envia via POST (JSON)

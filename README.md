@@ -33,6 +33,7 @@ Site estático (HTML5, CSS3 e JavaScript puro), sem backend e sem banco de dados
 | Número do WhatsApp | Links `wa.me/5571991448224` nos HTML e `CONFIG.whatsapp` em `script.js`. |
 | Redes sociais | No rodapé do `index.html`, links com `data-social` (Instagram @maratonaseg, Facebook maratona.seg, TikTok @maratonaseg). |
 | Cores | Variáveis no topo de `style.css` (`--roxo: #2A1147`, `--lilas`, `--dourado`). |
+| Google (GA4/Ads) e Meta Pixel | IDs em `TRACKING`, no topo de `tracking.js`. Vazios = nada é carregado. As tags só carregam após o visitante aceitar o aviso de cookies; cliques em WhatsApp/telefone/e-mail e o formulário viram eventos de contato. |
 
 ## Formulário de contato
 
