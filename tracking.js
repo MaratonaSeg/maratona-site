@@ -19,7 +19,7 @@
   'use strict';
 
   var TRACKING = {
-    googleTagId: '',
+    googleTagId: 'G-X2GW89NW79',
     googleAdsId: '',
     metaPixelId: ''
   };
