@@ -21,7 +21,7 @@
   var TRACKING = {
     googleTagId: 'G-X2GW89NW79',
     googleAdsId: '',
-    metaPixelId: ''
+    metaPixelId: '992369863941711'
   };
 
   var hasGoogle = !!TRACKING.googleTagId || !!TRACKING.googleAdsId;
